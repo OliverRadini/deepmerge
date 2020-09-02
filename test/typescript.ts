@@ -24,14 +24,14 @@ merged1.bar;
 merged2.foo;
 merged2.baz;
 
-const options1: merge.Options = {
+const options1: merge.Options<typeof x> = {
 	clone: true,
 	isMergeableObject (obj) {
 		return false;
 	},
 };
 
-const options2: merge.Options = {
+const options2: merge.Options<typeof x> = {
 	arrayMerge (target, source, options) {
 		target.length;
 		source.length;
